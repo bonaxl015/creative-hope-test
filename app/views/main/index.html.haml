@@ -1,2 +1,8 @@
-%h1 Main#index
-%p Find me in app/views/main/index.html.haml
+.d-flex.flex-wrap.justify-content-evenly
+  - @user_all.each do |user|
+    .card.w-25.me-3.mt-4
+      .card-body
+        %h5.card-title= user["name"]
+        %p.card-text= "Username: #{user["username"]}"
+        %p.card-text= "Phone: #{user["phone"]}"
+        %p.card-text= "Company: #{user["company"]['name']}"
