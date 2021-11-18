@@ -1,17 +1,12 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.devise-main
+  .devise-items
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .form-floating.mb-3
+        = f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control", id: "floatingInput", placeholder: "Username"
+        %label(for="floatingInput") Username
+      .form-floating.mb-3
+        = f.password_field :password, autocomplete: "current-password", class: "form-control", id: "floatingPassword", placeholder: "Password"
+        %label(for="floatingInput") Password
+      .mb-2
+        = f.submit "Log in", class: "btn btn-success btn-wide"
+    = render "devise/shared/links"
