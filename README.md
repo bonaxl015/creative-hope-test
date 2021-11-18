@@ -1,24 +1,37 @@
-# README
+# Getting Started
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To begin, the repository must be forked or cloned.
 
-Things you may want to cover:
+Then run `bundle install` to install ruby gems and run `yarn install` to install all dependencies listed to package.json.
 
-* Ruby version
+# Set Up Database
 
-* System dependencies
+To start database, run below commands to your terminal. Make sure that you are using postgresql as a database.
 
-* Configuration
+```
+sudo service postgresql start
+```
 
-* Database creation
+Then go to psql and create a role.
 
-* Database initialization
+```
+sudo -u postgres psql
+create role rails login
+```
 
-* How to run the test suite
+# Create and Migrate Database
 
-* Services (job queues, cache servers, search engines, etc.)
+Create database on Rails application.
 
-* Deployment instructions
+```
+rails db:create
+```
 
-* ...
+Then run `rails db:migrate` to create tables in database.
+
+# Run Server
+
+To start server, run `rails server` to the command line.
+
+Happy coding!
+
