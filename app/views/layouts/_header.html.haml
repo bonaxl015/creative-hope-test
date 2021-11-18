@@ -1,0 +1,15 @@
+.nav.navbar.navbar-dark.bg-purple.sticky-top.navbar-expand-lg
+  .container-fluid.container
+    .d-sm-flex
+      - if user_signed_in?
+        = link_to 'CRH PH Coding Exam', main_index_path, class: 'navbar-brand'
+      - else
+        = link_to 'CRH PH Coding Exam', home_index_path, class: 'navbar-brand'
+    %div
+      %ul.navbar-nav.ms-auto
+        - if user_signed_in?
+          %li.nav-item
+            = link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link'
+        - else
+          %li.nav-item
+            = link_to 'Sign in', home_index_path, class: 'nav-link'
