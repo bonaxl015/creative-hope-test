@@ -1,3 +1,29 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  color: purple;
+}
+
+.container {
+  height: 100%;
+}
+
+.app-main {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.home-button-item {
+  display: grid;
+  place-items: center;
+
+  .btn-wide {
+    width: 80%;
+  }
+}

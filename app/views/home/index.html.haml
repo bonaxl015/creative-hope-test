@@ -1,2 +1,6 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+.app-main
+  .home-item
+    %img(src="https://rec-data.kalibrr.com/www.kalibrr.com/logos/KRU64SLUJBX9W5AYAVS7HJK5KQP6NND94WVGZRX7-5e3a74d8.png" alt="company logo")
+    .home-button-item
+      =link_to "Log in", new_user_session_path, class: "btn btn-success btn-wide mb-3"
+      =link_to "Sign up", new_user_registration_path, class: "btn btn-danger btn-wide mb-3"
