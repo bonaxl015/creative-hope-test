@@ -6,7 +6,7 @@
         = f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control", id: "floatingInput", placeholder: "Username"
         %label(for="floatingInput") Username
       .form-floating.mb-3
-        = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", id: "floatingInput", placeholder: "Email"
+        = f.email_field :email, autocomplete: "email", class: "form-control", id: "floatingInput", placeholder: "Email"
         %label(for="floatingInput") Email
       .form-floating.mb-3
         = f.password_field :password, autocomplete: "current-password", class: "form-control", id: "floatingPassword", placeholder: "Password"
