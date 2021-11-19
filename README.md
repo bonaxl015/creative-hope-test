@@ -33,5 +33,9 @@ Then run `rails db:migrate` to create tables in database.
 
 To start server, run `rails server` to the command line.
 
+# Load Initial Data
+
+Run `rails db:seed` to load initial data.
+
 Happy coding!
 
